@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ruangguru - Website Pendidikan</title>
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+  <style>
+    body {
+      background-color: #fefefe;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .navbar {
+      background-color: #f8f3ff;
+    }
+
+    .navbar-brand,
+    .nav-link {
+      color: #5a4e7c !important;
+      font-weight: 600;
+    }
+
+    .hero {
+      background: linear-gradient(to right, #e8f0ff, #fceefc);
+      padding: 100px 0;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      color: #4b4b4b;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      color: #6c757d;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 40px;
+      color: #5a4e7c;
+      font-weight: 700;
+    }
+
+    .card {
+      border: none;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    }
+
+    .testimoni {
+      background-color: #f9f6ff;
+      padding: 60px 0;
+    }
+
+    .kontak {
+      background-color: #f0f8ff;
+      padding: 60px 0;
+    }
+
+    footer {
+      background-color: #dedbfa;
+      color: #4b4b4b;
+      text-align: center;
+      padding: 20px;
+      font-weight: 600;
+    }
+     /* Tambahan dari poin 4 */
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container">
+      <a class="navbar-brand" href="#">Ruangguru</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto align-items-center gap-3">
+          <li class="nav-item">
+            <a class="nav-link" href="#tentang">Tentang</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#program">Program</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#belajar">Ruang Belajar</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#fitur unggulan">Fitur Unggulan</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#paket">Paket</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#testimoni">Testimoni</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#kontak">Kontak</a>
+          </li>
+          <li class="nav-item">
+            <a
+              class="btn btn-outline-primary"
+              href="#"
+              data-bs-toggle="modal"
+              data-bs-target="#loginModal"
+              >Masuk</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="btn btn-primary text-white"
+              href="#"
+              data-bs-toggle="modal"
+              data-bs-target="#registerModal"
+              >Daftar</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <h1>Selamat Datang di Ruangguru</h1>
+      <p>Platform pembelajaran modern dengan pendekatan yang menyenangkan dan personal.</p>
+      <a href="#program" class="btn btn-primary mt-3">Lihat Program Kami</a>
+    </div>
+  </section>
+
+  <!-- Tentang Kami -->
+  <section id="tentang" class="py-5">
+    <div class="container">
+      <h2 class="section-title">Tentang Kami</h2>
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <p>
+            Ruangguru adalah platform pendidikan digital yang berfokus pada
+            pembelajaran interaktif, kreatif, dan menyenangkan. Kami percaya
+            bahwa setiap anak memiliki potensi untuk berkembang jika diberi
+            ruang dan bimbingan yang tepat.
+          </p>
+        </div>
+        <div class="col-md-6">
+          <img
+            src="ruangguru.jpg" width="300px"
+            alt="Tentang Kami"
+            class="img-fluid rounded"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Program -->
+  <section id="program" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="section-title">Program Kami</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card p-3">
+            <h5>Kursus Matematika</h5>
+            <p>
+              Pemahaman konsep dasar hingga lanjutan dengan pendekatan visual dan
+              praktik.
+            </p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card p-3">
+            <h5>Bahasa Inggris Interaktif</h5>
+            <p>Latihan berbicara, mendengarkan, dan membaca secara menyenangkan.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card p-3">
+            <h5>Koding untuk Anak</h5>
+            <p>Belajar dasar pemrograman melalui game dan proyek sederhana.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Ruang Belajar -->
+  <section id="belajar" class="py-5">
+    <div class="container">
+      <h2 class="section-title">Ruang Belajar</h2>
+      <div class="row g-4">
+        <div class="col-md-3">
+          <div class="card p-3 text-center">
+            <h5>Matematika</h5>
+            <p>Materi bilangan, geometri, aljabar, dll.</p>
+            <a href="#" class="btn btn-outline-primary btn-sm">Mulai Belajar</a>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card p-3 text-center">
+            <h5>Bahasa Indonesia</h5>
+            <p>Pelajari tata bahasa, menulis, membaca.</p>
+            <a href="#" class="btn btn-outline-primary btn-sm">Mulai Belajar</a>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card p-3 text-center">
+            <h5>IPA</h5>
+            <p>Eksperimen seru dan pengetahuan alam.</p>
+            <a href="#" class="btn btn-outline-primary btn-sm">Mulai Belajar</a>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card p-3 text-center">
+            <h5>Bahasa Inggris</h5>
+            <p>Listening, grammar, conversation fun.</p>
+            <a href="#" class="btn btn-outline-primary btn-sm">Mulai Belajar</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Fitur Unggulan Ruangguru -->
+  <section id="fitur-unggulan" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="section-title">Fitur Unggulan Ruangguru</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card p-4 h-100 text-center">
+            <img
+              src="drill soal.png"
+              alt="Drill Soal"
+              class="mb-3"
+            />
+            <h5>Drill Soal</h5>
+            <p>Latihan soal interaktif untuk meningkatkan kemampuan dan kecepatan menjawab.</p>
+            <a href="#" class="btn btn-primary">Mulai Drill Soal</a>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card p-4 h-100 text-center">
+            <img
+              src="brain academy.jpg" width="300px"
+              alt="Brain Academy"
+              class="mb-3"
+            />
+            <h5>Brain Academy</h5>
+            <p>Kelas online dengan guru terbaik dan materi lengkap yang mudah dipahami.</p>
+            <a href="#" class="btn btn-primary">Daftar Brain Academy</a>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card p-4 h-100 text-center">
+            <img
+              src="roboguru.jpg" width="300px"
+              alt="RoboGuru"
+              class="mb-3"
+            />
+            <h5>RoboGuru</h5>
+            <p>Tanya soal sulit dan dapatkan solusi lengkap dari AI pintar kami.</p>
+            <a href="#" class="btn btn-primary">Tanya di RoboGuru</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="paket" class="py-5">
+  <div class="container">
+    <h2 class="section-title">Paket Belajar</h2>
+    <div class="row g-4">
+      <div class="col-md-3">
+        <div class="card text-center p-3">
+          <h5>Paket SD</h5>
+          <p>Belajar dasar dengan video dan kuis interaktif.</p>
+          <h4 class="text-success">Rp150.000/bln</h4>
+          <a href="#" class="btn btn-primary">Daftar</a>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card text-center p-3">
+          <h5>Paket SMP</h5>
+          <p>Persiapan ujian & latihan soal lengkap.</p>
+          <h4 class="text-success">Rp200.000/bln</h4>
+          <a href="#" class="btn btn-primary">Daftar</a>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card text-center p-3">
+          <h5>Paket SMA</h5>
+          <p>UTBK & materi sekolah terlengkap.</p>
+          <h4 class="text-success">Rp250.000/bln</h4>
+          <a href="#" class="btn btn-primary">Daftar</a>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card text-center p-3">
+          <h5>Paket Premium</h5>
+          <p>Akses semua fitur + bimbingan live.</p>
+          <h4 class="text-success">Rp350.000/bln</h4>
+          <a href="#" class="btn btn-primary">Daftar</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Testimoni -->
+  <section id="testimoni" class="testimoni">
+    <div class="container">
+      <h2 class="section-title">Apa Kata Mereka?</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card p-3">
+            <p>
+              "Ruangguru membantu anak saya lebih percaya diri dalam belajar.
+              Metodenya sangat ramah anak."
+            </p>
+            <small>- Ibu Rina</small>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card p-3">
+            <p>
+              "Program kodingnya sangat menarik, anak saya jadi suka teknologi
+              sejak dini."
+            </p>
+            <small>- Bapak Andi</small>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card p-3">
+            <p>
+              "Guru-gurunya sabar dan profesional. Ruangguru adalah pilihan
+              terbaik."
+            </p>
+            <small>- Ibu Sari</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Kontak -->
+  <section id="kontak" class="kontak">
+    <div class="container">
+      <h2 class="section-title">Hubungi Kami</h2>
+      <form>
+        <div class="mb-3">
+          <label for="nama" class="form-label">Nama</label>
+          <input
+            type="text"
+            class="form-control"
+            id="nama"
+            placeholder="Nama Anda"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">Email</label>
+          <input
+            type="email"
+            class="form-control"
+            id="email"
+            placeholder="Email Anda"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="pesan" class="form-label">Pesan</label>
+          <textarea
+            class="form-control"
+            id="pesan"
+            rows="3"
+            placeholder="Tulis pesan Anda..."
+          ></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Kirim</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Ruangguru.</p>
+  </footer>
+
+  <!-- Modal Login -->
+  <div
+    class="modal fade"
+    id="loginModal"
+    tabindex="-1"
+    aria-labelledby="loginModalLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Masuk ke Akun</h5>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Tutup"
+          ></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="emailLogin" class="form-label">Email</label>
+              <input
+                type="email"
+                class="form-control"
+                id="emailLogin"
+                placeholder="email@domain.com"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="passwordLogin" class="form-label">Kata Sandi</label>
+              <input
+                type="password"
+                class="form-control"
+                id="passwordLogin"
+                placeholder="********"
+              />
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Masuk</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Daftar -->
+  <div
+    class="modal fade"
+    id="registerModal"
+    tabindex="-1"
+    aria-labelledby="registerModalLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Daftar Akun Baru</h5>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Tutup"
+          ></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="namaDaftar" class="form-label">Nama Lengkap</label>
+              <input
+                type="text"
+                class="form-control"
+                id="namaDaftar"
+                placeholder="Nama Anda"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="emailDaftar" class="form-label">Email</label>
+              <input
+                type="email"
+                class="form-control"
+                id="emailDaftar"
+                placeholder="email@domain.com"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="passwordDaftar" class="form-label">Kata Sandi</label>
+              <input
+                type="password"
+                class="form-control"
+                id="passwordDaftar"
+                placeholder="********"
+              />
+            </div>
+            <button type="submit" class="btn btn-success w-100">Daftar</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+  ></script>
+</body>
+</html>

@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Citra Shop</title>
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Dancing+Script:wght@600;700&display=swap" rel="stylesheet"/>
+
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+  <!-- Custom CSS -->
+  <style>
+    :root {
+      --pink-1: #FFF0F5;
+      --pink-2: #FFC2E2;
+      --pink-3: #FF8DC7;
+      --pink-4: #FF4D9D;
+      --pink-dark: #D63384;
+      --soft-white: #FFFBFE;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: var(--pink-1);
+      color: #333;
+    }
+
+    h1, h2, h3, h5 {
+      font-family: 'Dancing Script', cursive;
+      color: var(--pink-4);
+    }
+
+    .navbar {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(12px);
+      box-shadow: 0 2px 15px rgba(255, 77, 153, 0.15);
+    }
+
+    .btn-pink {
+      background: var(--pink-3);
+      color: white;
+      border: none;
+      border-radius: 50px;
+      padding: 10px 30px;
+      font-weight: 500;
+      transition: all 0.3s;
+    }
+
+    .btn-pink:hover {
+      background: var(--pink-4);
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(255, 77, 153, 0.3);
+    }
+
+    .card {
+      border: none;
+      border-radius: 20px;
+      overflow: hidden;
+      background: white;
+      box-shadow: 0 5px 15px rgba(255, 105, 180, 0.1);
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(255, 77, 153, 0.25);
+    }
+
+    .card-img-top {
+      height: 220px;
+      object-fit: cover;
+    }
+
+    .price {
+      font-weight: 600;
+      color: var(--pink-4);
+      font-size: 1.2rem;
+    }
+
+    .hero {
+      min-height: 90vh;
+      background: linear-gradient(rgba(255, 105, 180, 0.7), rgba(255, 182, 217, 0.6)), 
+                  url('https://images.unsplash.com/photo-1607082349566-187342175e2f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80') center/cover;
+      display: flex;
+      align-items: center;
+      color: white;
+    }
+
+    .section-title {
+      font-size: 3.2rem;
+      margin-bottom: 1rem;
+    }
+
+    .category-badge {
+      background: var(--pink-2);
+      color: var(--pink-dark);
+      padding: 5px 15px;
+      border-radius: 50px;
+      font-size: 0.85rem;
+      font-weight: 500;
+    }
+
+    footer {
+      background: var(--pink-2);
+      color: #333;
+      padding: 4rem 0 2rem;
+    }
+
+    .social-icons a {
+      color: var(--pink-4);
+      font-size: 1.6rem;
+      margin: 0 12px;
+      transition: 0.3s;
+    }
+
+    .social-icons a:hover {
+      color: var(--pink-dark);
+      transform: scale(1.3);
+    }
+
+    .testimonial-card {
+      background: white;
+      border-radius: 20px;
+      padding: 1.5rem;
+      box-shadow: 0 5px 15px rgba(255, 105, 180, 0.1);
+    }
+
+    .stars {
+      color: #FFD700;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- SECTION 1: NAVBAR -->
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold fs-4" style="color: var(--pink-4);" href="#">Citra Shop</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#products">Shop</a></li>
+          <li class="nav-item"><a class="nav-link" href="#testimoni">Testimoni</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- SECTION 2: HERO -->
+  <section class="hero text-center">
+    <div class="container">
+      <h1 class="display-3 section-title">Citra Shop</h1>
+      <p class="lead fs-3 mb-4">Mekar Cantik, Penuh Pesona</p>
+      <p class="mb-4" style="max-width: 600px; margin: 0 auto;">Toko aesthetic untuk remaja perempuan: fashion, aksesoris, dan barang lucu berwarna pink!</p>
+      <a href="#products" class="btn btn-pink btn-lg">Belanja Sekarang</a>
+    </div>
+  </section>
+
+  <!-- SECTION 3: CATEGORIES -->
+  <section class="py-5 bg-white">
+    <div class="container text-center">
+      <h2 class="section-title">Kategori</h2>
+      <div class="row g-3 mt-3">
+        <div class="col-6 col-md-3"><span class="category-badge">Fashion</span></div>
+        <div class="col-6 col-md-3"><span class="category-badge">Aksesoris</span></div>
+        <div class="col-6 col-md-3"><span class="category-badge">Stationery</span></div>
+        <div class="col-6 col-md-3"><span class="category-badge">Home Decor</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 4: PRODUCTS (10 Produk) -->
+  <section id="products" class="py-5">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="section-title">Koleksi Terbaru</h2>
+        <p class="text-muted">10 item aesthetic spesial untuk kamu!</p>
+      </div>
+
+      <div class="row g-4">
+        <!-- Produk 1 -->
+        <div class="col-md-4 col-lg-3">
+          <div class="card h-100">
+            <img src="mossdoom.jpg" class="card-img-top" alt="Tote Bag">
+            <div class="card-body text-center p-3">
+              <h5 class="card-title fs-6">Tote Bag Mosdoom</h5>
+              <p class="price">Rp 130.000</p>
+              <a href="#" class="btn btn-pink btn-sm w-100">Beli</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Produk 2 -->
+        <div class="col-md-4 col-lg-3">
+          <div class="card h-100">
+            <img src="sweater pink.webp" class="card-img-top" alt="Sweater">
+            <div class="card-body text-center p-3">
+              <h5 class="card-title fs-6">Sweater Pink Pastel</h5>
+              <p class="price">Rp 179.000</p>
+              <a href="#" class="btn btn-pink btn-sm w-100">Beli</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Produk 3 -->
+        <div class="col-md-4 col-lg-3">
+          <div class="card h-100">
+            <img src="Ikat Rambut Scrunchie.jpg" class="card-img-top" alt="Scrunchie">
+            <div class="card-body text-center p-3">
+              <h5 class="card-title fs-6">Scrunchie Set (5)</h5>
+              <p class="price">Rp 45.000</p>
+              <a href="#" class="btn btn-pink btn-sm w-100">Beli</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Produk 4 -->
+        <div class="col-md-4 col-lg-3">
+          <div class="card h-100">
+            <img src="Lampu tidur.jpg" class="card-img-top" alt="Lampu">
+            <div class="card-body text-center p-3">
+              <h5 class="card-title fs-6">Lampu Tidur</h5>
+              <p class="price">Rp 129.000</p>
+              <a href="#" class="btn btn-pink btn-sm w-100">Beli</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Produk 5 -->
+        <div class="col-md-4 col-lg-3">
+          <div class="card h-100">
+            <img src="pink bow mug.jpg" class="card-img-top" alt="Mug">
+            <div class="card-body text-center p-3">
+              <h5 class="card-title fs-6">Mug Aesthetic</h5>
+              <p class="price">Rp 69.000</p>
+              <a href="#" class="btn btn-pink btn-sm w-100">Beli</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Produk 6 -->
+        <div class="col-md-4 col-lg-3">
+          <div class="card h-100">
+            <img src="boneka pink.jpg" class="card-img-top" alt="Sticker">
+            <div class="card-body text-center p-3">
+              <h5 class="card-title fs-6">Boneka pink</h5>
+              <p class="price">Rp 75.000</p>
+              <a href="#" class="btn btn-pink btn-sm w-100">Beli</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Produk 7 -->
+        <div class="col-md-4 col-lg-3">
+          <div class="card h-100">
+            <img src="Kalung hati.jpg" class="card-img-top" alt="Kalung">
+            <div class="card-body text-center p-3">
+              <h5 class="card-title fs-6">Kalung Hati</h5>
+              <p class="price">Rp 200.000</p>
+              <a href="#" class="btn btn-pink btn-sm w-100">Beli</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Produk 8 -->
+        <div class="col-md-4 col-lg-3">
+          <div class="card h-100">
+            <img src="kaos kaki.jpg" class="card-img-top" alt="Kaos Kaki">
+            <div class="card-body text-center p-3">
+              <h5 class="card-title fs-6">Kaos Kaki Pendek</h5>
+              <p class="price">Rp 25.000</p>
+              <a href="#" class="btn btn-pink btn-sm w-100">Beli</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Produk 9 -->
+        <div class="col-md-4 col-lg-3">
+          <div class="card h-100">
+            <img src="pouch makeup.webp" class="card-img-top" alt="Pouch">
+            <div class="card-body text-center p-3">
+              <h5 class="card-title fs-6">Pouch Makeup</h5>
+              <p class="price">Rp 79.000</p>
+              <a href="#" class="btn btn-pink btn-sm w-100">Beli</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Produk 10 -->
+        <div class="col-md-4 col-lg-3">
+          <div class="card h-100">
+            <img src="kipas angin.webp" class="card-img-top" alt="Bantal">
+            <div class="card-body text-center p-3">
+              <h5 class="card-title fs-6">Kipas Angin Mini</h5>
+              <p class="price">Rp 99.000</p>
+              <a href="#" class="btn btn-pink btn-sm w-100">Beli</a>
+            </div>
+          </div>
+        </div>
+    
+                <!-- Produk 11 -->
+            <div class="col-md-4 col-lg-3">
+            <div class="card h-100">
+                <img src="Tas Ransel.jpg" class="card-img-top" alt="Bantal">
+                <div class="card-body text-center p-3">
+                <h5 class="card-title fs-6">Tas Ransel Pink</h5>
+                <p class="price">Rp 150.000</p>
+                <a href="#" class="btn btn-pink btn-sm w-100">Beli</a>
+                </div>
+            </div>
+            </div>
+
+                 <!-- Produk 12 -->
+            <div class="col-md-4 col-lg-3">
+            <div class="card h-100">
+                <img src="7 Pcs Cute Pink Stationery Set.jpg" class="card-img-top" alt="Bantal">
+                <div class="card-body text-center p-3">
+                <h5 class="card-title fs-6">7 Pcs Cute Pink Stationery Set</h5>
+                <p class="price">Rp 50.000</p>
+                <a href="#" class="btn btn-pink btn-sm w-100">Beli</a>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>  
+
+  </section>
+
+  <!-- SECTION 5: TESTIMONI + FOOTER -->
+  <section id="testimoni" class="py-5 bg-white">
+    <div class="container">
+      <h2 class="section-title text-center mb-5">Apa Kata Mereka?</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="testimonial-card text-center">
+            <p class="mb-3">"Tote bag-nya lucu banget! Kualitas oke, pengiriman cepat!"</p>
+            <div class="stars mb-2">★★★★★</div>
+            <strong>Awa, 04</strong>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="testimonial-card text-center">
+            <p class="mb-3">"Sweater-nya lembut, warnanya pas banget sama foto!"</p>
+            <div class="stars mb-2">★★★★★</div>
+            <strong>Ivi, 27</strong>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="testimonial-card text-center">
+            <p class="mb-3">"Scrunchie-nya imut, cocok buat foto OOTD!"</p>
+            <div class="stars mb-2">★★★★☆</div>
+            <strong>Rere, 24</strong>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="contact" class="text-center">
+    <div class="container">
+      <h4 class="mb-3">Citra Shop</h4>
+      <p>Jl. Sakura No. 123, Bandung</p>
+      <p>Email: hello@citrashop.com | WA: 0812-3456-7890</p>
+      <div class="social-icons mb-3">
+        <a href="#"><i class="bi bi-instagram"></i></a>
+        <a href="#"><i class="bi bi-tiktok"></i></a>
+        <a href="#"><i class="bi bi-whatsapp"></i></a>
+      </div>
+      <p>&copy; 2025 Citra Shop. All rights reserved. Made with 💕</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
